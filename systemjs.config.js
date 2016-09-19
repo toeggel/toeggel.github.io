@@ -1,0 +1,42 @@
+// map tells the System loader where to look for things
+var map = {
+    "app": "",
+    "@angular": "vendor/@angular",
+    "rxjs": "vendor/rxjs",
+    "vendor": "vendor",
+};
+// packages tells the System loader how to load when no filename and/or no extension
+var packages = {
+    "app": { main: "main.js", defaultExtension: "js" },
+    "rxjs": { defaultExtension: "js" },
+};
+var ngPackageNames = [
+    "common",
+    "compiler",
+    "core",
+    "forms",
+    "http",
+    "platform-browser",
+    "platform-browser-dynamic",
+    "router",
+    "router-deprecated",
+    "upgrade",
+];
+// Individual files (~300 requests):
+function packIndex(pkgName) {
+    packages["@angular/" + pkgName] = { main: "index.js", defaultExtension: "js" };
+}
+// Bundled (~40 requests):
+function packUmd(pkgName) {
+    packages["@angular/" + pkgName] = { main: "/bundles/" + pkgName + ".umd.js", defaultExtension: "js" };
+}
+// Most environments should use UMD; some (Karma) need the individual index files
+var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
+// Add package entries for angular packages
+ngPackageNames.forEach(setPackageConfig);
+System.config({
+    map: map,
+    packages: packages,
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN5c3RlbWpzLmNvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSx1REFBdUQ7QUFDdkQsSUFBTSxHQUFHLEdBQUc7SUFDVixLQUFLLEVBQUUsRUFBRTtJQUNULFVBQVUsRUFBRSxpQkFBaUI7SUFDN0IsTUFBTSxFQUFFLGFBQWE7SUFDckIsUUFBUSxFQUFFLFFBQVE7Q0FDbkIsQ0FBQztBQUVGLG9GQUFvRjtBQUNwRixJQUFNLFFBQVEsR0FBRztJQUNmLEtBQUssRUFBRyxFQUFFLElBQUksRUFBRSxTQUFTLEVBQUUsZ0JBQWdCLEVBQUUsSUFBSSxFQUFFO0lBQ25ELE1BQU0sRUFBRSxFQUFFLGdCQUFnQixFQUFFLElBQUksRUFBRTtDQUNuQyxDQUFDO0FBRUYsSUFBTSxjQUFjLEdBQUc7SUFDckIsUUFBUTtJQUNSLFVBQVU7SUFDVixNQUFNO0lBQ04sT0FBTztJQUNQLE1BQU07SUFDTixrQkFBa0I7SUFDbEIsMEJBQTBCO0lBQzFCLFFBQVE7SUFDUixtQkFBbUI7SUFDbkIsU0FBUztDQUNWLENBQUM7QUFDRixvQ0FBb0M7QUFDcEMsbUJBQW1CLE9BQU87SUFDeEIsUUFBUSxDQUFDLFdBQVcsR0FBRyxPQUFPLENBQUMsR0FBRyxFQUFFLElBQUksRUFBRSxVQUFVLEVBQUUsZ0JBQWdCLEVBQUUsSUFBSSxFQUFFLENBQUM7QUFDakYsQ0FBQztBQUNELDBCQUEwQjtBQUMxQixpQkFBaUIsT0FBTztJQUN0QixRQUFRLENBQUMsV0FBVyxHQUFHLE9BQU8sQ0FBQyxHQUFHLEVBQUUsSUFBSSxFQUFFLFdBQVcsR0FBRyxPQUFPLEdBQUcsU0FBUyxFQUFFLGdCQUFnQixFQUFFLElBQUksRUFBRSxDQUFDO0FBQ3hHLENBQUM7QUFLRCxpRkFBaUY7QUFDakYsSUFBSSxnQkFBZ0IsR0FBRyxNQUFNLENBQUMsZ0JBQWdCLEdBQUcsU0FBUyxHQUFHLE9BQU8sQ0FBQztBQUNyRSwyQ0FBMkM7QUFDM0MsY0FBYyxDQUFDLE9BQU8sQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDO0FBRXpDLE1BQU0sQ0FBQyxNQUFNLENBQUM7SUFDWixHQUFHLEVBQUUsR0FBRztJQUNSLFFBQVEsRUFBRSxRQUFRO0NBQ25CLENBQUMsQ0FBQyIsImZpbGUiOiJzeXN0ZW1qcy5jb25maWcuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBtYXAgdGVsbHMgdGhlIFN5c3RlbSBsb2FkZXIgd2hlcmUgdG8gbG9vayBmb3IgdGhpbmdzXG5jb25zdCBtYXAgPSB7XG4gIFwiYXBwXCI6IFwiXCIsXG4gIFwiQGFuZ3VsYXJcIjogXCJ2ZW5kb3IvQGFuZ3VsYXJcIixcbiAgXCJyeGpzXCI6IFwidmVuZG9yL3J4anNcIixcbiAgXCJ2ZW5kb3JcIjogXCJ2ZW5kb3JcIixcbn07XG5cbi8vIHBhY2thZ2VzIHRlbGxzIHRoZSBTeXN0ZW0gbG9hZGVyIGhvdyB0byBsb2FkIHdoZW4gbm8gZmlsZW5hbWUgYW5kL29yIG5vIGV4dGVuc2lvblxuY29uc3QgcGFja2FnZXMgPSB7XG4gIFwiYXBwXCI6ICB7IG1haW46IFwibWFpbi5qc1wiLCBkZWZhdWx0RXh0ZW5zaW9uOiBcImpzXCIgfSxcbiAgXCJyeGpzXCI6IHsgZGVmYXVsdEV4dGVuc2lvbjogXCJqc1wiIH0sXG59O1xuXG5jb25zdCBuZ1BhY2thZ2VOYW1lcyA9IFtcbiAgXCJjb21tb25cIixcbiAgXCJjb21waWxlclwiLFxuICBcImNvcmVcIixcbiAgXCJmb3Jtc1wiLFxuICBcImh0dHBcIixcbiAgXCJwbGF0Zm9ybS1icm93c2VyXCIsXG4gIFwicGxhdGZvcm0tYnJvd3Nlci1keW5hbWljXCIsXG4gIFwicm91dGVyXCIsXG4gIFwicm91dGVyLWRlcHJlY2F0ZWRcIixcbiAgXCJ1cGdyYWRlXCIsXG5dO1xuLy8gSW5kaXZpZHVhbCBmaWxlcyAofjMwMCByZXF1ZXN0cyk6XG5mdW5jdGlvbiBwYWNrSW5kZXgocGtnTmFtZSkge1xuICBwYWNrYWdlc1tcIkBhbmd1bGFyL1wiICsgcGtnTmFtZV0gPSB7IG1haW46IFwiaW5kZXguanNcIiwgZGVmYXVsdEV4dGVuc2lvbjogXCJqc1wiIH07XG59XG4vLyBCdW5kbGVkICh+NDAgcmVxdWVzdHMpOlxuZnVuY3Rpb24gcGFja1VtZChwa2dOYW1lKSB7XG4gIHBhY2thZ2VzW1wiQGFuZ3VsYXIvXCIgKyBwa2dOYW1lXSA9IHsgbWFpbjogXCIvYnVuZGxlcy9cIiArIHBrZ05hbWUgKyBcIi51bWQuanNcIiwgZGVmYXVsdEV4dGVuc2lvbjogXCJqc1wiIH07XG59XG5cbi8qKiBUeXBlIGRlY2xhcmF0aW9uIGZvciBhbWJpZW50IFN5c3RlbS4gKi9cbmRlY2xhcmUgdmFyIFN5c3RlbTogYW55O1xuXG4vLyBNb3N0IGVudmlyb25tZW50cyBzaG91bGQgdXNlIFVNRDsgc29tZSAoS2FybWEpIG5lZWQgdGhlIGluZGl2aWR1YWwgaW5kZXggZmlsZXNcbmxldCBzZXRQYWNrYWdlQ29uZmlnID0gU3lzdGVtLnBhY2thZ2VXaXRoSW5kZXggPyBwYWNrSW5kZXggOiBwYWNrVW1kO1xuLy8gQWRkIHBhY2thZ2UgZW50cmllcyBmb3IgYW5ndWxhciBwYWNrYWdlc1xubmdQYWNrYWdlTmFtZXMuZm9yRWFjaChzZXRQYWNrYWdlQ29uZmlnKTtcblxuU3lzdGVtLmNvbmZpZyh7XG4gIG1hcDogbWFwLFxuICBwYWNrYWdlczogcGFja2FnZXMsXG59KTtcbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
