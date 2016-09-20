@@ -9,6 +9,7 @@
 
   <script>
     // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+    // SPA github pages hack for 404 - redirects
     (function(){
       var redirect = sessionStorage.redirect;
       delete sessionStorage.redirect;
@@ -18,6 +19,7 @@
     })();
   </script>
 
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="assets/css/main.css">
   <!-- 1. Load libraries -->
   <!-- Polyfill(s) for older browsers -->
@@ -29,13 +31,22 @@
   <!-- 2. Configure SystemJS -->
   <script src="systemjs.config.js"></script>
   <script>
-      System.import("app").catch(function(err){ console.error(err); });
+    var environment = { production: true }
+    if(environment.production) {
+      document.write("<script src='/app.min.js'><\/script>");
+    }
+    else{
+      document.write("<script>System.import('app').catch(function(err){ console.error(err); });<\/script>");
+    }
   </script>
 
 </head>
 <!-- 3. Display the application -->
+
 <body>
   <my-app>Loading...</my-app>
 </body>
+
+<script src="service-worker-registration.js"></script>
 
 </html>

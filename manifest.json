@@ -1,0 +1,23 @@
+{
+  "name": "Angular2WebApp",
+  "short_name": "WebApp",
+  "start_url": "./home",
+  "display": "standalone",
+  "background_color": "#FF8800",
+  "theme_color": "#000000",
+  "description": "My sample angular 2 PWA",
+  "icons": [
+    {
+      "src": "assets/images/surfer-48.png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "assets/images/surfer-128.png",
+      "sizes": "72x72 128x128"
+    },
+    {
+      "src": "assets/images/surfer-256.png",
+      "sizes": "144x144 192x192 256x256"
+    }
+  ]
+}
