@@ -1,5 +1,5 @@
 var dataCache = "dataCache-1  ";
-var appShellCache = "appShellCache-2";
+var appShellCache = "appShellCache-3";
 var custom404 = new Request("/404.html");
 var routesToRedirects = [];
 var filesToCache = [
