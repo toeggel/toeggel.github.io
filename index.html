@@ -20,7 +20,12 @@
   </script>
 
   <link rel="manifest" href="manifest.json">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
+
   <!-- 1. Load libraries -->
   <!-- Polyfill(s) for older browsers -->
   <script src="vendor/core-js/client/shim.min.js"></script>
@@ -28,6 +33,9 @@
   <script src="vendor/reflect-metadata/Reflect.js"></script>
   <script src="vendor/systemjs/dist/system.src.js"></script>
   <!-- other libraries -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <!-- 2. Configure SystemJS -->
   <script src="systemjs.config.js"></script>
   <script>
@@ -44,9 +52,36 @@
 <!-- 3. Display the application -->
 
 <body>
-  <my-app>Loading...</my-app>
+  <my-app>
+    <style>
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0px 0px -25px;
+      }
+    </style>
+    <div class="preloader-wrapper small active loader">
+      <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </my-app>
 </body>
 
 <script src="service-worker-registration.js"></script>
+<script>
+  $( document ).ready(function() {
+    $(".button-collapse").sideNav();
+  })
+</script>
 
 </html>
