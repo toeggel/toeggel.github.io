@@ -3,6 +3,7 @@
   "short_name": "WebApp",
   "start_url": "./home",
   "display": "standalone",
+  "gcm_sender_id": "624340965811",
   "background_color": "#FF8800",
   "theme_color": "#000000",
   "description": "My sample angular 2 PWA",
@@ -14,12 +15,17 @@
     },
     {
       "src": "assets/images/surfer-128.png",
-      "sizes": "72x72 128x128",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/surfer-144.png",
+      "sizes": "144x144",
       "type": "image/png"
     },
     {
       "src": "assets/images/surfer-256.png",
-      "sizes": "144x144 192x192 256x256",
+      "sizes": "256x256",
       "type": "image/png"
     }
   ]
