@@ -2,9 +2,8 @@ var version = 5;
 var dataCache = "dataCache-1";
 var appShellCache = "appShellCache-" + version;
 var custom404 = new Request("/404.html");
-var routesToRedirects = [];
+var routesToRedirects = [new Request("/home"),];
 var filesToCache = [
-    new Request("/home"),
     new Request("/"),
     new Request("/app.min.js"),
     new Request("/app/app.component.html "),
