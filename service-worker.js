@@ -1,4 +1,4 @@
-var version = 8;
+var version = 9;
 var dataCache = "dataCache-1";
 var appShellCache = "appShellCache-" + version;
 var custom404 = new Request("/404.html");
