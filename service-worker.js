@@ -4,6 +4,7 @@ var appShellCache = "appShellCache-" + version;
 var custom404 = new Request("/404.html");
 var routesToRedirects = [
     new Request("/home"),
+	new Request("/camera"),
 ];
 var filesToCache = [
     new Request("/main.js"),
