@@ -1,0 +1,6 @@
+"use strict";
+exports.environment = {
+    production: true,
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNsaWVudC9jb25maWcvZW52aXJvbm1lbnQucHJvZC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQWEsbUJBQVcsR0FBRztJQUN6QixVQUFVLEVBQUUsSUFBSTtDQUNqQixDQUFDIiwiZmlsZSI6ImNsaWVudC9jb25maWcvZW52aXJvbm1lbnQucHJvZC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBlbnZpcm9ubWVudCA9IHtcbiAgcHJvZHVjdGlvbjogdHJ1ZSxcbn07XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

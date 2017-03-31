@@ -5,7 +5,7 @@
   "display": "standalone",
   "gcm_sender_id": "624340965811",
   "permissions": [ "gcm","storage","pushMessaging","notifications" ],
-  "background_color": "#FF8800",
+  "background_color": "#ffa726",
   "theme_color": "#000000",
   "description": "My sample angular 2 PWA",
   "icons": [

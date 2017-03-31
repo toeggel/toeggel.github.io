@@ -1,25 +1,5 @@
 <div class="container">
   <div class="row">
-    <div class="col s12">
-      <div class="card-panel">
-        <b>Push notifications are </b>
-        <span class="switch">
-        <label>
-      Off
-      <input id="subscribe" disabled type="checkbox">
-      <span class="lever"></span> On
-        </label>
-        </span>
-        <div>
-          <b>Your endpoint is: </b>
-          <span id="endpoint" style="word-wrap:break-word;"></span>
-        </div>
-        <div>
-          <b>Your registration Id is: </b>
-          <span id="registrationId" style="word-wrap:break-word;"></span>
-        </div>
-      </div>
-    </div>
     <my-message [message]="message" *ngFor="let message of messages"></my-message>
   </div>
 </div>
