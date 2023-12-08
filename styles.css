@@ -21,15 +21,16 @@ p {
     color: #d8dee9; /* Nord4 */
 }
 
-main {
+section {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
 }
 
 article {
     background-color: #4c566a; /* Nord3 */
+    flex: 1;
     border-radius: 8px;
     padding: 20px;
     margin: 10px;
@@ -46,7 +47,7 @@ article:hover {
 a {
     color: #81a1c1; /* Nord9 */
     text-decoration: none;
-    display: block;
+    display: flex;
     margin-top: 10px;
 }
 
