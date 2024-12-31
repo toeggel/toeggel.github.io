@@ -2,8 +2,8 @@
   "name": "Swing Wedding",
   "short_name": "Swing Wedding",
   "theme_color": "#88c0d0",
-  "start_url": "./",
-  "display": "browser",
+  "start_url": "./wedding",
+  "display": "standalone",
   "background_color": "#2e3440",
   "orientation": "portrait",
   "icons": [

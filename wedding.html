@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="icon" type="image/png" href="wedding-favicon.png"/>
   <link rel="manifest" href="wedding-manifest.json">
   <link rel="stylesheet" href="styles.css">
@@ -42,3 +43,27 @@
 </body>
 
 </html>
+
+<script>
+  /* Get the element you want displayed in fullscreen mode (a video in this example): */
+  addEventListener('click', function() {
+    var el = document.documentElement,
+      rfs = el.requestFullscreen
+        || el.webkitRequestFullScreen
+        || el.mozRequestFullScreen
+        || el.msRequestFullscreen 
+    ;
+
+    rfs.call(el);
+});
+  addEventListener('touchstart', function() {
+    var el = document.documentElement,
+      rfs = el.requestFullscreen
+        || el.webkitRequestFullScreen
+        || el.mozRequestFullScreen
+        || el.msRequestFullscreen 
+    ;
+
+    rfs.call(el);
+});
+</script>
