@@ -48,7 +48,6 @@ a {
     color: #81a1c1; /* Nord9 */
     text-decoration: none;
     display: flex;
-    margin-top: 10px;
 }
 
 a:focus, a:hover {
