@@ -54,3 +54,8 @@ a {
 a:focus, a:hover {
     text-decoration: underline;
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+}
